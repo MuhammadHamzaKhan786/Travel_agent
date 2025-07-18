@@ -8,7 +8,7 @@ from agents.local_guide_agent import LocalGuideAgent
 
 # Load API key
 load_dotenv()
-openai_key = os.getenv("OPENAI_API_KEY")
+gimini_api_key = os.getenv("GIMINI_API_KEY")
 
 # Agents
 destination_agent = TravelInterestAgent()
