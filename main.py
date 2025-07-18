@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 from agents.travel_interest_agent import TravelInterestAgent
 from agents.flight_hotel_agent import FlightHotelAgent
-from agents.local_guide_agent import LocalGuideAgent
+from agents.travel_guide_agent import TravelGuideAgent
 
 # Load API key
 load_dotenv()
