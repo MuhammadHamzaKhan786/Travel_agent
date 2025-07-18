@@ -1,4 +1,4 @@
-class ExploreAgent:
+class TravelGuideAgent:
     def explore(self, destination: str) -> str:
         destination = destination.lower().strip()
 
