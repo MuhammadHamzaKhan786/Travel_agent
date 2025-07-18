@@ -1,18 +1,19 @@
 import chainlit as cl
 import os
 from dotenv import load_dotenv
-from agents.destination_agent import DestinationAgent
-from agents.booking_agent import BookingAgent
-from agents.explore_agent import ExploreAgent
+
+from agents.travel_interest_agent import TravelInterestAgent
+from agents.flight_hotel_agent import FlightHotelAgent
+from agents.local_guide_agent import LocalGuideAgent
 
 # Load API key
 load_dotenv()
-gimini_api_key = os.getenv("GIMINI_API_KEY")
+openai_key = os.getenv("OPENAI_API_KEY")
 
 # Agents
-destination_agent = DestinationAgent()
-booking_agent = BookingAgent()
-explore_agent = ExploreAgent()
+destination_agent = TravelInterestAgent()
+booking_agent = FlightHotelAgent()
+explore_agent = LocalGuideAgent()
 
 # State tracker
 state = {"stage": "start", "destination": ""}
@@ -23,7 +24,7 @@ async def start():
     await cl.Message(
         content=(
             "🌍 **Welcome to the AI Travel Designer Agent!**\n\n"
-            "I'm here to plan your perfect trip from destination ideas to flights, hotels, food, and attractions. 😎\n\n"
+            "I'm here to plan your perfect trip — from dream destinations to flights, hotels, and things to do. 😎\n\n"
             "✈️ Just tell me your **travel mood or interest** to begin:\n"
             "- `adventure` (e.g. skydiving, hiking)\n"
             "- `relaxation` (e.g. beaches, spa)\n"
