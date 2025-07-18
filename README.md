@@ -1,43 +1,34 @@
-# 🧳 AI Travel Designer Agent
+# 🌍 AI Travel Designer Agent
 
-Plan a full travel experience using a modular multi-agent system built with Chainlit.
+**Your Personal AI-Powered Travel Planner**  
+Plan the perfect trip with an intelligent agent that suggests destinations, finds flights & hotels, and recommends things to do — all based on your mood or interest.
 
-## 💡 What It Does
+---
 
-- Suggests destinations based on your mood or interests
-- Simulates flight and hotel booking using mock data
-- Recommends attractions and local food options
+## ✨ Features
 
-## 🧠 Agents
+- 🧠 **Destination Recommendations**: Get top-rated global travel spots based on your mood (adventure, culture, romance, etc.)
+- ✈️ **Flight & Hotel Suggestions**: View curated travel options with realistic details and variety.
+- 🗺️ **Explore Activities**: Discover food, attractions, and experiences in famous cities.
+- 🔄 **Interactive Agent Flow**: Easy-to-use chat interface powered by [Chainlit](https://docs.chainlit.io).
 
-- **DestinationAgent** → Suggests places to visit
-- **BookingAgent** → Mocks flight and hotel options
-- **ExploreAgent** → Suggests local attractions and food
+---
 
-## 🔧 Tools
+## 🧰 Tech Stack
 
-- `get_flights()`, `suggest_hotels()` using mock data
-- Travel flow is simulated across multiple stages
+| Layer         | Tech                        |
+|---------------|-----------------------------|
+| UI & Chat     | [Chainlit](https://chainlit.io) |
+| Language Model| Gimini (2.0 flash compatible)   |
+| Environment   | Python + dotenv              |
+| Agent Logic   | Custom modular agents (`DestinationAgent`, `BookingAgent`, `ExploreAgent`) |
 
-## 🚀 How to Run
+---
 
-1. Install dependencies:
+## 🚀 Getting Started
+
+### 1. Clone the Repo
+
 ```bash
-pip install chainlit python-dotenv
-```
-
-2. Add your OpenAI API key in `.env` (not mandatory in this mock version)
-
-3. Run the app:
-```bash
-chainlit run main.py
-```
-
-Then open the browser: [http://localhost:8000](http://localhost:8000)
-
-## 💬 Try Prompts
-
-- `adventure`
-- `relaxation`
-- `culture`
-- `romance`
+git clone https://github.com/yourusername/ai-travel-designer.git
+cd ai-travel-designer
