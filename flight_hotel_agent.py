@@ -1,6 +1,6 @@
 import random
 
-class BookingAgent:
+class FlightHotelAgent:
     def get_flights(self, destination: str) -> str:
         flights = [
             f"✈️ **Flight A**: Non-stop to {destination}, $520 – Airline: Emirates, Duration: 6h 20m",
