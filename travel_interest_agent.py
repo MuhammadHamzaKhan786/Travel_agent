@@ -1,7 +1,7 @@
 import random
 from difflib import get_close_matches
 
-class DestinationAgent:
+class TravelInterestAgent:
     def __init__(self):
         self.data = {
             "adventure": [
